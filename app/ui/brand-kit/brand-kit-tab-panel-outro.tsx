@@ -1,25 +1,35 @@
 'use client'
 
-import {Box, FormControl, InputLabel, MenuItem, Select, TextField, Tooltip, Typography} from "@mui/material";
+import {
+    Box,
+    FormControl,
+    InputLabel,
+    MenuItem,
+    Select,
+    SelectChangeEvent,
+    TextField,
+    Tooltip,
+    Typography
+} from "@mui/material";
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
 
 import * as React from "react";
 import {useState} from "react";
 
 interface Props {
-    onOutroDataChange
+    onOutroDataChange: (data: { callToAction: string; customCallToAction: string }) => void;
 }
 
 export default function BrandKitTabPanelOutro({onOutroDataChange}: Props) {
     const [callToAction, setCallToAction] = useState('');
     const [customCallToAction, setCustomCallToAction] = useState('')
 
-    const handleCallToActionChange = (event) => {
+    const handleCallToActionChange = (event: SelectChangeEvent<string>) => {
         setCallToAction(event.target.value);
         onOutroDataChange({callToAction: event.target.value, customCallToAction: customCallToAction});
     };
 
-    const handleCustomCallToActionChange = (event) => {
+    const handleCustomCallToActionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setCustomCallToAction(event.target.value);
         if(event.target.value !== '') {
             setCallToAction('')

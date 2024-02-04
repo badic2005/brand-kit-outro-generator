@@ -13,11 +13,11 @@ export default function BrandKitForm() {
     const [loading, setLoading] = useState(false)
     const [isOpenAlert, setIsOpenAlert] = useState({isOpen: false, isError: false, message: ''})
 
-    const handleOutroDataChange = (data) => {
+    const handleOutroDataChange = (data: any) => {
         setOutroData(data);
     };
 
-    const handleSaveClick = (e) => {
+    const handleSaveClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         const data = {...outroData, brandKitName}
         setLoading(true)
         fetch('http://localhost:3001/api/generate-outro', {

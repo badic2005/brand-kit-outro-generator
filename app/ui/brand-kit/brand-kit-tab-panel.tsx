@@ -15,7 +15,7 @@ interface TabPanelProps {
 }
 
 interface Props {
-    onOutroDataChange
+    onOutroDataChange: (data: { callToAction: string; customCallToAction: string }) => void;
 }
 
 export default function BrandKitTabsPanel({onOutroDataChange}: Props) {
