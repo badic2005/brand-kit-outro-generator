@@ -1,0 +1,54 @@
+.whiteBlock {
+  max-height: 620px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.container {
+  padding-top: 64px;
+  padding-left: 97px;
+  padding-right: 97px;
+}
+
+.name {
+  height: 22px;
+  //margin-top: 64px;
+  //margin-left: 97px;
+  margin-right: 37px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  color: #191C26;
+}
+
+.saveButton {
+  width: 81px;
+  height: 30px;
+  text-transform: capitalize;
+  padding: 8px 24px;
+  margin-bottom: 40px;
+  borderRadius: 6px;
+  background-color: #2237FF;
+  color: #fff;
+  fontFamily: 'Manrope';
+  fontSize: 14px;
+  fontWeight: 600;
+  lineHeight: 14px;
+  textAlign: 'center';
+  cursor: pointer;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 160px;
+  right: 160px;
+  zIndex: 1000;
+}
+
+
+
